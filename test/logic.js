@@ -145,6 +145,15 @@ test('detects mobile Safari', function(t) {
   t.end();
 });
 
+test('detects iOS webview', function(t) {
+  assertAgentString(t,
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Mobile/14E269',
+    { name: 'ios-webview', version: '603.1.30' }
+  );
+
+  t.end();
+})
+
 test('detects Safari', function(t) {
   assertAgentString(t,
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A',
